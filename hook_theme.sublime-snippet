@@ -4,12 +4,14 @@
  * Implements hook_theme().
  */		
 function ${1:HOOK}_theme() {
-	\$themes = array();
-	\$file = 'includes/${1:HOOK}.theme.inc';
-	\$themes['${1:HOOK}_${2:THEME_FUNCTION_NAME}_HTML'] = array(
-	  'file' => $file,
-	  'variables' => array('${3:VAR1_NAME}' => NULL),
+	\$themes = array();${2:
+	\$file = 'includes/${1:HOOK}.theme.inc';}
+	\$themes['${1:HOOK}_${3:THEME_FUNCTION_NAME}_html'] = array(${4:
+	  'file' => $file,}
+	  'variables' => array('${5:VAR1_NAME}' => NULL),${6:
+	  'template' => '${1:HOOK}_${3:THEME_FUNCTION_NAME}',}
 	);
+	return \$themes;
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
