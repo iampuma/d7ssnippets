@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_theme().
+ */		
+function ${1:HOOK}_theme() {
+	\$themes = array();
+	\$file = 'includes/${1:HOOK}.theme.inc';
+	\$themes['${1:HOOK}_${2:THEME_FUNCTION_NAME}_HTML'] = array(
+	  'file' => $file,
+	  'variables' => array('${3:VAR1_NAME}' => NULL),
+	);
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ht</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>.module</scope> -->
+</snippet>
