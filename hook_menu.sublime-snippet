@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_menu().
+ */
+function ${1:HOOK}_menu() {
+  \$items = array();
+
+  \$items['${1:PAGE_URL}'] = array(
+    'title' => '${2:TITLE}',
+    'page callback' => '${3:PAGE_CALLBACK}_page',${4:
+    'page arguments' => array(${5}),}
+    'access callback' => array('${6:access content}'),
+    'file' => INCLUDE_PATH . '${1:HOOK}.pages.inc',
+  );
+
+  return \$items;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hm</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
