@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_menu().
+ *
+ * @link https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_menu/7
+ * @link http://drupalcode.org/project/examples.git/blob/HEAD:/menu_example/menu_example.module
+ */
+function ${1:HOOK}_menu() {
+  \$items = array();
+
+  \$items['${2:PAGE_URL}'] = array(${3:
+    'title' => '${4:TITLE}', //Required. The untranslated title of the menu item with t() as default callback}${5:
+    'title callback' => '${6:TITLE_CALLBACK}', //The function to generate the title, defaults to t()
+    'title arguments' => array(${7}), //Arguments to pass to t() or your custom title callback}${8:
+    'description' => '${9:DESCRIPTION}', //The untranslated description of the menu item}
+    'page callback' => '_${10:PAGE_CALLBACK}_page', //The function to call to display a web page${11:
+    'page arguments' => array(${12}), //Arguments to pass to the page callback function}${13:
+    'access callback' => '${14:ACCESS_CALLBACK}', //Function returning true if the user has access rights to the page with user_access as default callback}
+    'access arguments' => array('${15:access content}'), //Arguments to pass to the access callback function ${16:
+    'theme callback' => '${17:THEME_CALLBACK}', //Theme callback that returns the machine-readable name of the theme that will be used to render the page}${18:
+    'theme arguments' => array(${19}), //Arguments to pass to the theme callback function}
+    'file' => INCLUDE_PATH . '${20:HOOK}.pages.inc', //file that will be included before the page callback is called, this allows page callbacks to be in seperate files${21:
+    'load arguments' => array(${22}), //Arguments to be passed to each of the wildcard object loaders in the path}${23:
+    'weight' => ${24}, //An integer that determines the position in the menu, higherweighted items sink, defaults to 0}${25:
+    'menu_name' => '${26}', //Optional, sets an item link into a menu, defaults to navigation menu }${27:
+    'expanded' => ${28}, //Optional, expands the menu tree for this item}${29:
+    'context' => ${30}, //Optional, Defines the context a tab may appear in (MENU_CONTEXT_PAGE AND/OR MENU_CONTEXT_INLINE)}${31:
+    'tab_parent' => ${32}, //For local task menu items, the path of the task's parent item, defaults to last path}${33:
+    'tab_root' => ${34}, //For local task menu items, the path of the closest non-tab item; same default as "tab_parent"}${35:
+    'position' => '${36}', //Position of the block ('left' or 'right') on the system administration page for this item}${37:
+    'type' => '${38}', //MENU_NORMAL_ITEM (default), MENU_CALLBACK, MENU_SUGGESTED_ITEM, MENU_LOCAL_ACTION, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK}${39:
+    'options' => array(${40})}, //Aguments to be passed to the l() when generating a link from this menu item
+    'delivery callback' => '${41}', //Function to call to package the result of the page callback, defaults drupal_deliver_html_page()
+  );
+
+  return \$items;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hmfi</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>

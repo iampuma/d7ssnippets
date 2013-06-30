@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+\$items['${1:PAGE_URL}'] = array(
+  'title' => '${2:TITLE}',
+  'page callback' => '_${3:PAGE_CALLBACK}_page',${4:
+  'page arguments' => array(${5}),}
+  'access arguments' => array('${6:access content}'),
+  'file' => INCLUDE_PATH . '${7:HOOK}.pages.inc',
+);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hmi</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>

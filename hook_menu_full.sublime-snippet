@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_menu().
+ *
+ */
+function ${1:HOOK}_menu() {
+  \$items = array();
+
+  \$items['${2:PAGE_URL}'] = array(${3:
+    'title' => '${4:TITLE}',}${5:
+    'title callback' => '${6:TITLE_CALLBACK}',
+    'title arguments' => array(${7}),}${8:
+    'description' => '${9:DESCRIPTION}',}
+    'page callback' => '_${10:PAGE_CALLBACK}_page',${11:
+    'page arguments' => array(${12}),}${13:
+    'access callback' => '${14:ACCESS_CALLBACK}',}
+    'access arguments' => array('${15:access content}'),${16:
+    'theme callback' => '${17:THEME_CALLBACK}',}${18:
+    'theme arguments' => array(${19}),}
+    'file' => INCLUDE_PATH . '${20:HOOK}.pages.inc',${21:
+    'load arguments' => array(${22}),}${23:
+    'weight' => ${24},}${25:
+    'menu_name' => '${26}',}${27:
+    'expanded' => ${28},}${29:
+    'context' => ${30},}${31:
+    'tab_parent' => ${32},}${33:
+    'tab_root' => ${34},}${35:
+    'position' => '${36}',}${37:
+    'type' => '${38}',}${39:
+    'options' => array(${40})},
+  );
+
+  return \$items;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hmf</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
