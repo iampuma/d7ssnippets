@@ -13,7 +13,7 @@ Feel free to contribute!
 
 #### Examples ####
 * ht[tab] => hook_theme basic implementation
-* hmfi[tab] => hook_menu with all attributes avialable with comments
+* hmfi[tab] => hook_menu with all attributes available + comments
 
 ### Other ###
 * declare => opening php tag with a comment heading
