@@ -10,7 +10,7 @@ Feel free to contribute!
 * Basic hook: H + HOOK NAME FIRST LETTER
 * Full hook:  H + HOOK NAME FIRST LETTER + F
 * Full + comment hook : H + HOOK NAME FIRST LETTER + F + I
-#### Examples ####
+  #### Examples ####
 * ht => hook_theme basic implementation
 * hmfi => hook_menu with all attributes avialable with comments
 
