@@ -7,9 +7,9 @@ Feel free to contribute!
 ## Snippet shortcuts ##
 
 ### Drupal hooks ###
-* Basic hook: H + HOOK NAME FIRST LETTER
-* Full hook:  H + HOOK NAME FIRST LETTER + F
-* Full + comment hook : H + HOOK NAME FIRST LETTER + F + I
+* Basic hook: h + 'first letter of the hook name'
+* Full hook:  h + 'first letter of the hook name' + f
+* Full + comment hook : h + 'first letter of the hook name' + f + i
 
 #### Examples ####
 * ht[tab] => hook_theme basic implementation
