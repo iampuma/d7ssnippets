@@ -12,8 +12,8 @@ Feel free to contribute!
 * Full + comment hook : h + *first letter of the hook name* + f + i
 
 #### Examples ####
-* **ht**[tab] => hook_theme basic implementation
-* **hmfi**[tab] => hook_menu with all attributes available + comments
+* **ht** => hook_theme basic implementation
+* **hmfi** => hook_menu with all attributes available + comments
 
 ### Other ###
 * **declare** => opening php tag with a comment heading
