@@ -1,5 +1,5 @@
-Sublime Text 2 Drupal 7 snippets.
+# Sublime Text 2 Drupal 7 snippets. #
 
-Install the snippets by copying them into your User package folder.
+Install the snippets by copying them into your [User package folder](http://docs.sublimetext.info/en/latest/basic_concepts.html#the-user-package). Sublime Text 2 will pick up the snippets without restart.
 
-On Mac this usually is: /Users/your.name/Library/Application Support/Sublime Text 2/Packages/User
+Feel free to contribute!
