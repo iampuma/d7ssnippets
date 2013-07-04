@@ -7,13 +7,13 @@ Feel free to contribute!
 ## Snippet shortcuts ##
 
 ### Drupal hooks ###
-Basic hook: H + HOOK NAME FIRST LETTER
-Full hook:  H + HOOK NAME FIRST LETTER + F
-Full + comment hook : H + HOOK NAME FIRST LETTER + F + I
+Basic hook: H + HOOK NAME FIRST LETTER\n
+Full hook:  H + HOOK NAME FIRST LETTER + F\n
+Full + comment hook : H + HOOK NAME FIRST LETTER + F + I\n
 #### Examples ####
-ht => hook_theme basic implementation
-hmfi => hook_menu with all attributes avialable with comments
+ht => hook_theme basic implementation\n
+hmfi => hook_menu with all attributes avialable with comments\n
 
 ### Other ###
-declare => opening php tag with a comment heading
-info => full implementation for your module.info file
+declare => opening php tag with a comment heading\n
+info => full implementation for your module.info file\n
