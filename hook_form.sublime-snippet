@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Form ${5}
+ */
+function ${1:HOOK}_form(\$form, &\$form_state) {
+  \$form = array();
+
+  ${2:// Rendered array of form elements
+  // Form API: https://api.drupal.org/node/15320}
+
+  \$form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+
+  return \$form;
+}
+
+/**
+ * Form validation handler for ${1:HOOK}_form().
+ */
+function ${1:HOOK}_form_validate(\$form, &\$form_state) {
+  ${3:// Validation actions
+  // \$values = \$form_state['values'];
+  // form_set_error('FIELD', t('ERROR_MESSAGE'));}
+}
+
+/**
+ * Form submit handler for ${1:HOOK}_form().
+ */
+function ${1:HOOK}_form_submit(\$form, &\$form_state) {
+  ${4:// Submit actions
+  // \$values = \$form_state['values'];
+  // drupal_set_message(t('YOUR_MESSAGE'));}
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hf</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
