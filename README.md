@@ -7,7 +7,7 @@ Feel free to contribute!
 ## Snippet shortcuts ##
 
 ### Drupal hooks ###
-* Basic hook: h + 'first letter of the hook name'
+* Basic hook: h + *first letter of the hook name*
 * Full hook:  h + 'first letter of the hook name' + f
 * Full + comment hook : h + 'first letter of the hook name' + f + i
 
