@@ -8,13 +8,13 @@ Feel free to contribute!
 
 ### Drupal hooks ###
 * Basic hook: h + *first letter of the hook name*
-* Full hook:  h + 'first letter of the hook name' + f
-* Full + comment hook : h + 'first letter of the hook name' + f + i
+* Full hook:  h + *first letter of the hook name* + f
+* Full + comment hook : h + *first letter of the hook name* + f + i
 
 #### Examples ####
-* ht[tab] => hook_theme basic implementation
-* hmfi[tab] => hook_menu with all attributes available + comments
+* **ht**[tab] => hook_theme basic implementation
+* **hmfi**[tab] => hook_menu with all attributes available + comments
 
 ### Other ###
-* declare => opening php tag with a comment heading
-* info => full implementation for your module.info file
+* **declare** => opening php tag with a comment heading
+* **info** => full implementation for your module.info file
