@@ -4,13 +4,13 @@ Install the snippets by copying them into your [User package folder](http://docs
 
 Feel free to contribute!
 
-## Snippet shortcut names ##
+## Snippet shortcuts ##
 
 ### Drupal hooks ###
 Basic hook: H + HOOK NAME FIRST LETTER
 Full hook:  H + HOOK NAME FIRST LETTER + F
 Full + comment hook : H + HOOK NAME FIRST LETTER + F + I
-### Drupal hooks examples ###
+#### Examples ####
 ht => hook_theme basic implementation
 hmfi => hook_menu with all attributes avialable with comments
 
