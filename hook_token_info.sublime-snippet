@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_token_info().
+ */
+function ${1:HOOK}_token_info() { ${2:
+	\$info['types']['${1:HOOK}'] = array(
+			'name' => t('${1:HOOK}'),
+			'description' => t('${1:HOOK} tokens'),
+			'needs-data' => '${1:HOOK}',
+	);}
+  \$info['tokens']['${3:${1:HOOK}}']['${4:TOKEN_FIELD}'] = array(
+      'name' => t('${4:TOKEN_FIELD}'),
+      'description' => t('The ${3:${1:HOOK}} ${4:TOKEN_FIELD}.'),
+  );${5:
+// Add this snippet to your code to replace the tokens
+// \$text = token_replace(\$text, \$data);
+//}${6:
+// Add this snippet to your hook_form or hook_form_alter to add a table overview of your tokens
+// $form['tokens'] = array(
+//   '#theme' => 'token_tree',
+//   '#token_types' => array('ENTITY'), // The token types that have specific context.
+//   '#global_types' => FALSE, // A boolean TRUE or FALSE whether to include 'global' context tokens like [current-user:*] or [site:*]. Defaults to TRUE.
+//   '#click_insert' => FALSE, // A boolean whether to include the 'Click this token to insert in into the the focused textfield' JavaScript functionality. Defaults to TRUE.
+// );}
+  return \$info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function ${1:HOOK}_tokens(\$type, \$tokens, array \$data = array(), array \$options = array()) {
+	\$replacements = array();
+
+  if (\$type == '${7:${3:${1:HOOK}}}' && !empty(\$data['${7:${3:${1:HOOK}}}'])) {
+    foreach (\$tokens as \$name => \$original) {
+      \$replacements[\$original] = \$data['${7:${3:${1:HOOK}}}'][\$name];
+    }
+  }
+
+	return \$replacements;
+}
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tokens</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>.module</scope> -->
+</snippet>
