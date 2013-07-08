@@ -4,22 +4,22 @@
  * Implements hook_token_info().
  */
 function ${1:HOOK}_token_info() { ${2:
-	\$info['types']['${1:HOOK}'] = array(
-			'name' => t('${1:HOOK}'),
-			'description' => t('${1:HOOK} tokens'),
-			'needs-data' => '${1:HOOK}',
+	\$info['types']['${3:TOKEN_TYPE}'] = array(
+			'name' => t('${3:TOKEN_TYPE}'),
+			'description' => t('${3:TOKEN_TYPE} tokens'),
+			'needs-data' => '${3:TOKEN_TYPE}',
 	);}
-  \$info['tokens']['${3:${1:HOOK}}']['${4:TOKEN_FIELD}'] = array(
-      'name' => t('${4:TOKEN_FIELD}'),
-      'description' => t('The ${3:${1:HOOK}} ${4:TOKEN_FIELD}.'),
-  );${5:
+  \$info['tokens']['${4:${3:TOKEN_TYPE}}']['${5:TOKEN_FIELD}'] = array(
+      'name' => t('${5:TOKEN_FIELD}'),
+      'description' => t('The ${3:${3:TOKEN_TYPE}} ${5:TOKEN_FIELD}.'),
+  );${6:
 // Add this snippet to your code to replace the tokens
-// \$text = token_replace(\$text, \$data);
-//}${6:
+// \$text = token_replace(\$text, \$data); //with \$text as the to be replaced text and \$data['${4:${3:TOKEN_TYPE}}'] as your replacement
+//}${7:
 // Add this snippet to your hook_form or hook_form_alter to add a table overview of your tokens
-// $form['tokens'] = array(
+// \$form['tokens'] = array(
 //   '#theme' => 'token_tree',
-//   '#token_types' => array('ENTITY'), // The token types that have specific context.
+//   '#token_types' => array('${4:${3:TOKEN_TYPE}}'), // The token types that have specific context.
 //   '#global_types' => FALSE, // A boolean TRUE or FALSE whether to include 'global' context tokens like [current-user:*] or [site:*]. Defaults to TRUE.
 //   '#click_insert' => FALSE, // A boolean whether to include the 'Click this token to insert in into the the focused textfield' JavaScript functionality. Defaults to TRUE.
 // );}
@@ -32,9 +32,9 @@ function ${1:HOOK}_token_info() { ${2:
 function ${1:HOOK}_tokens(\$type, \$tokens, array \$data = array(), array \$options = array()) {
 	\$replacements = array();
 
-  if (\$type == '${7:${3:${1:HOOK}}}' && !empty(\$data['${7:${3:${1:HOOK}}}'])) {
+  if (\$type == '${8:${4:${3:TOKEN_TYPE}}}' && !empty(\$data['${8:${4:${3:TOKEN_TYPE}}}'])) {
     foreach (\$tokens as \$name => \$original) {
-      \$replacements[\$original] = \$data['${7:${3:${1:HOOK}}}'][\$name];
+      \$replacements[\$original] = \$data['${8:${4:${3:TOKEN_TYPE}}}'][\$name];
     }
   }
 
