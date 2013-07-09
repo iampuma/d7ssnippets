@@ -16,6 +16,19 @@ Feel free to contribute!
 * **hmfi** => hook_menu with all attributes available + comments
 * **hapa** => hook_admin_paths_alter basic implementation
 
-### Other ###
+### Full Overview ###
+* **hapa** => hook_admin_paths_alter
+* **hfa** => hook_form_alter
+* **hf** => hook_form
+* **hm** => hook_menu basic
+* **hma** => hook_menu_alter
+* **hni** => hook_node_insert
+* **ht** => hook_theme
+* **hti** => hook_theme_item
+
+* **tokens** => hook_token_info + hook_tokens implementation + comments
+* **hmf** => hook_menu with all atributes available
+* **hmfi** => hook_menu with all atributes available + comments
+* **hmi** => hook_menu item
 * **declare** => opening php tag with a comment heading
 * **info** => full implementation for your module.info file
