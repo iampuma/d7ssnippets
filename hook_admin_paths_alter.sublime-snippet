@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_admin_paths_alter().
+ */
+function ${1:HOOK}_admin_paths_alter(&\$paths) {
+  ${2:// kpr(\$paths);exit;}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hapa</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>.module</scope> -->
+</snippet>
