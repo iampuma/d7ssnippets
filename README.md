@@ -23,6 +23,7 @@ Feel free to contribute!
 * **hm** => hook_menu
 * **hma** => hook_menu_alter
 * **hni** => hook_node_insert
+* **hnp** => hook_node_presave
 * **ht** => hook_theme
 
 #### Extra ####
