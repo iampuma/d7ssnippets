@@ -7,9 +7,11 @@ function ${1:HOOK}_theme() {
 	\$themes = array();${2:
 	\$file = 'includes/${1:HOOK}.theme.inc';}
 	\$themes['${1:HOOK}_${3:THEME_FUNCTION_NAME}_html'] = array(${4:
-	  'file' => \$file,}
-	  'variables' => array('${5:VAR1_NAME}' => NULL),${6:
+	  'file' => \$file,}${5:
+	  'render element' => '${6:ELEMENT_NAME}',}${7:
+	  'variables' => array('${8:VAR1_NAME}' => NULL),${9:
 	  'template' => '${1:HOOK}_${3:THEME_FUNCTION_NAME}',}
+	  'path' => drupal_get_path('module', '${1:HOOK}') . '/theme'}
 	);
 	return \$themes;
 }
