@@ -31,7 +31,7 @@ Feel free to contribute!
 * **hmi** => hook_menu item
 * **hti** => hook_theme item
 * **tokens** => hook_token_info + hook_tokens implementation + comments
-* **mail** => hook_mail
+* **mail** => hook_mail + implementation comment
 * **hmf** => hook_menu with all atributes available
 * **hmfi** => hook_menu with all atributes available + comments
 * **declare** => opening php tag with a comment heading
