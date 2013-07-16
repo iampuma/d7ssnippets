@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_mail().
+ */
+function ${1:HOOK}_mail(\$key, &\$message, \$params) {
+  switch(\$key) {
+    case '${2:${1:HOOK}}_mail':
+      \$message['subject'] = ${3:'SUBJECT'};
+      \$message['body'][] = ${4:'BODY'};
+  }${5:
+  // mail example (\$to = 'test@example.com', \$from = variable_get('site_mail'), \$params = array())
+  // drupal_mail('${1:HOOK}', '${2:${1:HOOK}}_mail', \$to, language_default(), \$params, \$from, TRUE);}
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>mail</tabTrigger>
+
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
