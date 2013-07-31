@@ -25,6 +25,7 @@ Feel free to contribute!
 * **hni** => hook_node_insert
 * **hnp** => hook_node_presave
 * **ht** => hook_theme
+* **hff** => hook_field_formatter_info
 
 #### Extra ####
 
