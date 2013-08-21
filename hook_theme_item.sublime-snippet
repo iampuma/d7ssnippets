@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
-\$themes['${1:HOOK}_${2:THEME_FUNCTION_NAME}_html'] = array(${3:
-  'file' => \$file,}${4:
+\$themes['${1:HOOK}_${2:THEME_FUNCTION_NAME}${3:_html}'] = array(${4:
   'render element' => '${5:ELEMENT_NAME}',}${6:
   'variables' => array('${7:VAR1_NAME}' => NULL),}${8:
-  'template' => '${1:HOOK}_${2:THEME_FUNCTION_NAME}',}${9:
-  'path' => drupal_get_path('module', '${1:HOOK}') . '/theme'}
+  'template' => '${9:${1:HOOK}_${2:THEME_FUNCTION_NAME}}',
+  'path' => drupal_get_path('module', '${1:HOOK}') . '/theme',}${10:
+  'file' => 'includes/${1:HOOK}.theme.inc',}
 );
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
