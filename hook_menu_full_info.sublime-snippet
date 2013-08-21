@@ -32,8 +32,11 @@ function ${1:HOOK}_menu() {
     'type' => '${38}', //MENU_NORMAL_ITEM (default), MENU_CALLBACK, MENU_SUGGESTED_ITEM, MENU_LOCAL_ACTION, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK}${39:
     'options' => array(${40})}, //Aguments to be passed to the l() when generating a link from this menu item
     'delivery callback' => '${41}', //Function to call to package the result of the page callback, defaults drupal_deliver_html_page()
-  );
+  );${42:
 
+  foreach(\$items as &\$item) {
+    \$item['file'] = 'includes/${1:HOOK}.pages.inc';
+  \}}
   return \$items;
 }
 ]]></content>

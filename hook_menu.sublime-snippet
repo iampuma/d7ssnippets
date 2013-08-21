@@ -2,19 +2,19 @@
   <content><![CDATA[
 /**
  * Implements hook_menu().
- *
  */
 function ${1:HOOK}_menu() {
-  \$items = array();
-
   \$items['${2:PAGE_URL}'] = array(
     'title' => '${3:TITLE}',
-    'page callback' => '_${4:PAGE_CALLBACK}_page',${5:
+    'page callback' => '_${1:HOOK}_${4:PAGE_CALLBACK}_page',${5:
     'page arguments' => array(${6}),}
-    'access arguments' => array('${7:access content}'),
-    'file' => INCLUDE_PATH . '${1:HOOK}.pages.inc',
-  );
+    'access arguments' => array('${7:access content}'),${8:
+    'file' => 'includes/${1:HOOK}.pages.inc',}
+  );${9:
 
+  foreach(\$items as &\$item) {
+    \$item['file'] = 'includes/${1:HOOK}.pages.inc';
+  \}}
   return \$items;
 }
 ]]></content>

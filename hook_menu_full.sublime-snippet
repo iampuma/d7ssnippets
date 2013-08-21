@@ -17,20 +17,23 @@ function ${1:HOOK}_menu() {
     'access callback' => '${14:ACCESS_CALLBACK}',}
     'access arguments' => array('${15:access content}'),${16:
     'theme callback' => '${17:THEME_CALLBACK}',}${18:
-    'theme arguments' => array(${19}),}
-    'file' => INCLUDE_PATH . '${20:HOOK}.pages.inc',${21:
-    'load arguments' => array(${22}),}${23:
-    'weight' => ${24},}${25:
-    'menu_name' => '${26}',}${27:
-    'expanded' => ${28},}${29:
-    'context' => ${30},}${31:
-    'tab_parent' => ${32},}${33:
-    'tab_root' => ${34},}${35:
-    'position' => '${36}',}${37:
-    'type' => '${38}',}${39:
-    'options' => array(${40})},
-  );
+    'theme arguments' => array(${19}),}${20:
+    'file' => 'includes/${21:HOOK}.pages.inc',}${22:
+    'load arguments' => array(${23}),}${24:
+    'weight' => ${25},}${26:
+    'menu_name' => '${27}',}${28:
+    'expanded' => ${29},}${30:
+    'context' => ${31},}${32:
+    'tab_parent' => ${33},}${34:
+    'tab_root' => ${35},}${36:
+    'position' => '${37}',}${38:
+    'type' => '${39}',}${40:
+    'options' => array(${41})},
+  );${42:
 
+  foreach(\$items as &\$item) {
+    \$item['file'] = 'includes/${1:HOOK}.pages.inc';
+  \}}
   return \$items;
 }
 ]]></content>

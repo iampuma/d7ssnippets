@@ -4,7 +4,8 @@
  * Implements hook_menu_alter().
  */
 function ${1:HOOK}_menu_alter(&\$items) {
-  ${2:kpr(\$items);exit;}
+  ${2:${3:unset(\$items['node']);}
+  ${4:kpr(\$items);exit;}}
 }
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
