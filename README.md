@@ -7,15 +7,15 @@ Feel free to contribute!
 ## Snippet shortcuts ##
 
 ### Full Overview ###
-hook_admin_paths_alter
-hook_form_alter
-hook_form
-hook_menu
-hook_menu_alter
-hook_node_insert
-hook_node_presave
-hook_theme
-hook_field_formatter_info
+* hook_admin_paths_alter
+* hook_form_alter
+* hook_form
+* hook_menu
+* hook_menu_alter
+* hook_node_insert
+* hook_node_presave
+* hook_theme
+* hook_field_formatter_info
 
 #### Extra ####
 
