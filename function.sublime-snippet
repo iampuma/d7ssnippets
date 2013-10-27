@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[
-<?php
 /**
- * @file
- * Contains ${1:Give a good description about this file}
+ * ${6:Custom function: ${7}}
  */
+function ${3:${1:HOOK}_${2:FUNCTION_NAME}}(${4:\$variables}) {
+  ${5}${8}
+}
 
-${2:Start}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>declare</tabTrigger>
+  <tabTrigger>f</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <!-- <scope>.module</scope> -->
 </snippet>

@@ -6,34 +6,25 @@ Feel free to contribute!
 
 ## Snippet shortcuts ##
 
-### Drupal hooks ###
-* Basic hook: h + *first letters of the hook name*
-* Full hook:  h + *first letters of the hook name* + f
-* Full + comment hook : h + *first letters of the hook name* + f + i
-
-#### Examples ####
-* **ht** => hook_theme basic implementation
-* **hmfi** => hook_menu with all attributes available + comments
-* **hapa** => hook_admin_paths_alter basic implementation
-
 ### Full Overview ###
-* **hapa** => hook_admin_paths_alter
-* **hfa** => hook_form_alter
-* **hf** => hook_form
-* **hm** => hook_menu
-* **hma** => hook_menu_alter
-* **hni** => hook_node_insert
-* **hnp** => hook_node_presave
-* **ht** => hook_theme
-* **hff** => hook_field_formatter_info
+hook_admin_paths_alter
+hook_form_alter
+hook_form
+hook_menu
+hook_menu_alter
+hook_node_insert
+hook_node_presave
+hook_theme
+hook_field_formatter_info
 
 #### Extra ####
 
 * **hmi** => hook_menu item
 * **hti** => hook_theme item
-* **tokens** => hook_token_info + hook_tokens implementation + comments
-* **mail** => hook_mail + implementation comment
-* **hmf** => hook_menu with all atributes available
-* **hmfi** => hook_menu with all atributes available + comments
+* **hook_form** => hook_form + hook_form_validate + hook_form_submit
+* **hook_token** => hook_token_info + hook_tokens implementation + comments
+* **hook_mail** => hook_mail + implementation comment
+* **hook_menu_full** => hook_menu with all atributes available
+* **hook_menu_full_info** => hook_menu with all atributes available + comments
 * **declare** => opening php tag with a comment heading
 * **info** => full implementation for your module.info file

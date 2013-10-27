@@ -29,16 +29,13 @@ function ${1:HOOK}_menu() {
     'position' => '${37}',}${38:
     'type' => '${39}',}${40:
     'options' => array(${41})},
-  );${42:
+  );
 
-  foreach(\$items as &\$item) {
-    \$item['file'] = 'includes/${1:HOOK}.pages.inc';
-  \}}
   return \$items;
 }
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>hmf</tabTrigger>
+  <tabTrigger>hook_menu_full</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <!-- <scope>.module</scope> -->
 </snippet>
