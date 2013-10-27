@@ -28,3 +28,4 @@ Feel free to contribute!
 * **hook_menu_full_info** => hook_menu with all atributes available + comments
 * **declare** => opening php tag with a comment heading
 * **info** => full implementation for your module.info file
+* **f** => empty function
