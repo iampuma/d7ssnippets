@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[
 /**
- * Implements hook_entity_info()
+ * Implements hook_entity_info().
  *
  * @link http://www.trellon.com/content/blog/creating-own-entities-entity-api @unlink
  */
 function ${1:HOOK}_entity_info() {
-	$entities['${2:ENTITY}'] = array(
+	\$entities['${2:ENTITY}'] = array(
 		'label' => t('${3:${2:ENTITY}}'),
  		'entity class' => '${4:Entity}',
  		'controller class' => '${5:EntityAPIController}',
