@@ -16,6 +16,7 @@ Feel free to contribute!
 * hook_node_presave
 * hook_theme
 * hook_field_formatter_info
+* hook_permission
 
 #### Extra ####
 
