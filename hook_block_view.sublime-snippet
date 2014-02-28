@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_block_view().
+ */
+function ${1:HOOK}_block_view(\$delta = '') {
+  \$block = array();
+
+  switch (\$delta) {
+    case '${2:${1:HOOK}}${3}':${4:
+      \$block['subject'] = t('${5:${1:HOOK}}');}
+      \$block['content'] = ${6:'${1:HOOK}'};
+      break;
+  }
+
+  return \$block;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hook_block_view</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>.module</scope> -->
+</snippet>
