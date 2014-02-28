@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_entity_info().
+ *
+ * @link http://www.trellon.com/content/blog/creating-own-entities-entity-api @unlink
+ */
+function ${1:HOOK}_entity_info() {
+	\$entities['${2:ENTITY}'] = array(
+		'label' => t('${3:${2:ENTITY}}'),
+ 		'entity class' => '${4:Entity}',
+ 		'controller class' => '${5:EntityAPIController}',
+ 		'views controller class' => 'EntityDefaultViewsController',
+ 		'base table' => '${6:${2:ENTITY}}',
+ 		'fieldable' => TRUE,
+ 		'entity keys' => array(
+ 			'id' => '${7:id}',
+ 		),
+	    'bundles' => array(
+	      '${2:ENTITY}'=> array(
+	        'label' => '${2:ENTITY}',
+	        'admin' => array(
+	          'path' => '${8:admin/structure/${2:ENTITY}/manage}',
+	          'access arguments' => array('${9:administer content}'),
+	        ),
+	      ),
+	    ),${10:
+        'view modes' => array(
+	        '${11:full}' => array(
+	          'label' => t('${12:${11:Full}}'),
+	          'custom settings' =>  FALSE,
+	        ),${13:
+	        '${14:teaser}' => array(
+	          'label' => t('${15:${14:Teaser}}'),
+	          'custom settings' =>  FALSE,
+	        ),}
+        ),}
+	);
+
+	return \$entities;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hook_entity_info</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
