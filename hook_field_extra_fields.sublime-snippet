@@ -4,7 +4,7 @@
  * Implements hook_field_extra_fields().
  */
 function ${1:HOOK}_field_extra_fields() {
-  \$fields[${2:ENTITY$}][${3:BUNDLE}]['display'] = array(
+  \$fields[${2:ENTITY}][${3:BUNDLE}]['display'] = array(
       '${1:HOOK}_${4:CUSTOM_FIELD_NAME}' => array(
           'label' => t('${5:${4}}'),
           'description' => t('${6:${4}}'),

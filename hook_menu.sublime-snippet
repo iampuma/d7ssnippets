@@ -8,7 +8,7 @@ function ${1:HOOK}_menu() {
     'title' => '${3:TITLE}',
     'page callback' => '${8:_${1:HOOK}_${4:PAGE_CALLBACK}_page}',${5:
     'page arguments' => array(${6}),}
-    'access arguments' => array('${7:access content}'),${8:
+    'access arguments' => array('${7:access content}'),${9:
     'file' => 'includes/${1:HOOK}.pages.inc',}
   );
 
