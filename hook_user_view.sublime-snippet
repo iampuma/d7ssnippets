@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_user_view().
+ */
+function ${1:HOOK}_user_view(\$account, \$view_mode, \$langcode) {${2:
+  dsm(\$view_mode);}
+  ${3:if (\$view_mode == '${4:${1:HOOK}}') {
+    ${6}
+  \}}
+    ${5:\$account->content['${1:HOOK}'] = array(
+      '#markup' => 'My new field',
+    );}${7}
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>hook_user_view</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>

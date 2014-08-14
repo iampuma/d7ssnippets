@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * @file
+ * Contains ${1:javascript functionality for the ${2:custom} module}.
+ *
+ * @link http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth @unlink
+ * @link https://www.drupal.org/node/756722#behaviors @unlink
+ */
+(function (\$, Drupal, window, document, undefined) {
+  \$(function() {
+    Drupal.behaviors.${3:${2:module_namespace}} = {
+      attach: function (context, settings) {
+        ${4:console.log('javascript loaded!');}
+      }
+    };
+  });
+})(jQuery, Drupal, this, this.document);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>jsinit</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
