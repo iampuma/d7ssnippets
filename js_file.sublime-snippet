@@ -8,13 +8,11 @@
  * @link https://www.drupal.org/node/756722#behaviors @unlink
  */
 (function (\$, Drupal, window, document, undefined) {
-  \$(function() {
-    Drupal.behaviors.${3:${2:module_namespace}} = {
-      attach: function (context, settings) {
-        ${4:console.log('javascript loaded!');}
-      }
-    };
-  });
+  Drupal.behaviors.${3:${2:module_namespace}} = {
+    attach: function (context, settings) {
+      ${4:console.log('javascript loaded!');}
+    }
+  };
 })(jQuery, Drupal, this, this.document);
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
