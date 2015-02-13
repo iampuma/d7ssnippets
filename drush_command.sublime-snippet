@@ -1,0 +1,75 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Implements hook_drush_command().
+ */
+function ${1:HOOK}_drush_command() {
+  \$items['${2:DRUSH_COMMAND}'] = array(
+    'description' => '${4:${2:DRUSH_COMMAND_DESCRIPTION}}',
+    'examples' => array(
+      'Standard example' => '${2:DRUSH_COMMAND}',
+      'Alias example' => '${5:DRUSH_COMMAND_ALIAS}',
+    ),
+    'aliases' => array('${5:DRUSH_COMMAND_ALIAS}'),${6:
+    'options' => array(
+      'progress' => 'The number of entities to be processed before outputting progress status.',
+    ),}
+  );
+
+  return \$items;
+}
+
+/**
+ * Drush command: ${4:${2:DRUSH_COMMAND_DESCRIPTION}}
+ */
+function drush_${1:HOOK}_${3:${2:DRUSH_COMMAND}}() {
+  ${9:drush_print('${10:Starting drush command.}');}${7:
+  \$progress = drush_get_option('progress', ${11:1000});
+  \$i = 0;
+  // Query select the result so drush "${4:${2:DRUSH_COMMAND_DESCRIPTION}}"
+  \$result = db_query("${12}")->fetchAll();
+  \$total = count(\$result);
+  drush_print('Processing a total of ' . \$total);
+  foreach (\$result as \$row) {
+    // Process every row.
+    ${13}
+    // Show a progress bar status to the user terminal (default every ${11:1000} rows).
+    if (((++\$i) % \$progress) == 0) {
+      _drush_print_progress(\$i/\$total);
+    }}
+  }
+}${8:
+
+/**
+ * Provides a progress bar for drush commands.
+ * @link http://internetdevels.com/blog/creating-custom-drush-commands
+ */
+function _drush_print_progress(\$ratio) {
+  \$percentage = floor(\$ratio * 100) . '%';
+  \$columns = drush_get_context('DRUSH_COLUMNS', 80);
+  // Subtract 8 characters for the percentage, brackets, spaces and arrow.
+  \$progress_columns = \$columns - 8;
+  // If ratio is 1 (complete), the > becomes a = to make a full bar.
+  \$arrow = (\$ratio < 1) ? '>' : '=';
+  // Print a new line if ratio is 1 (complete). Otherwise, use a CR.
+  \$line_ending = (\$ratio < 1) ? "\r" : "\n";
+
+  // Determine the current length of the progress string.
+  \$current_length = floor(\$ratio * \$progress_columns);
+  \$progress_string = str_pad('', \$current_length, '=');
+
+  \$output  = '[';
+  \$output .= \$progress_string . \$arrow;
+  \$output .= str_pad('', \$progress_columns - \$current_length);
+  \$output .= ']';
+  \$output .= str_pad('', 5 - strlen(\$percentage)) . \$percentage;
+  \$output .= \$line_ending;
+
+  print \$output;
+}}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>drush_command</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>.module</scope> -->
+</snippet>
