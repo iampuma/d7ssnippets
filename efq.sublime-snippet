@@ -9,7 +9,7 @@ if (isset(\$result['${1:node}'])) {
   \$${1:node}s = entity_load('${1:node}', array_keys(\$result['${1:node}']));
 }${5:
 
-dsm(\$${1:node}s);}
+${5:dsm(\$${1:node}s);}}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>efq</tabTrigger>
